@@ -19,11 +19,7 @@ module CodeRayWithFallback
   end
 
   def self.retrieve_supported_languages
-    ::CodeRay::Scanners.list +
-    # Add CodeRay scanner aliases
-    ::CodeRay::Scanners.plugin_hash.keys.map(&:to_sym) -
-    # Remove internal CodeRay scanners
-    %w(debug default raydebug scanner).map(&:to_sym)
+    Rouge::Lexer.all.map(&:filenames).flatten.map { |l| l.gsub('*.', '') }.sort
   end
   private_class_method :retrieve_supported_languages
 
@@ -58,7 +54,7 @@ module CodeRayWithFallback
     end
 
     def language_supported?(language)
-      SUPPORTED_LANGUAGES.include?(language.to_s.downcase.to_sym)
+      SUPPORTED_LANGUAGES.include?(language.to_s.downcase)
     rescue
       false
     end
