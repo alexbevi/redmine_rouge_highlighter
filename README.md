@@ -2,6 +2,10 @@
 
 This plugin encapsulates the work done by [Go Maeda](https://twitter.com/g_maeda) on the [Redmine](http://www.redmine.org) issue tracker (see [Feature #24681](http://www.redmine.org/issues/24681)).
 
+![Screenshot](ss01.png)
+
+<small><em>Pardon my lousy screenshot, this is what I had on screen at the time ...</em></small>
+
 The [Rouge](https://github.com/jneen/rouge) syntax highlighter provides much more extensive language support than the default bundled with Redmine ([CodeRay](https://github.com/rubychan/coderay)).
 
 ## Installation
