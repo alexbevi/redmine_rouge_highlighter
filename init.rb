@@ -4,8 +4,8 @@ require_dependency "patches"
 Redmine::Plugin.register :redmine_rouge_highlighter do
   name        "Redmine Rouge-based Syntax Highlighter"
   author      "Alex Bevilacqua"
-  description "Use Rouge when Coderay won't do"
-  url         ""
+  description "Supplement CodeRay with Rouge"
+  url         "https://github.com/alexbevi/redmine_rouge_highlighter"
   author_url  "mailto:alexbevi@gmail.com"
   version     "0.0.1"
 
